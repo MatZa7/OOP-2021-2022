@@ -11,7 +11,7 @@ public class HelloProcessing extends PApplet
 	}
 
 	public void setup() {
-		colorMode(RGB);
+		colorMode(HSB);
 		background(0);
 
 	}
@@ -19,26 +19,37 @@ public class HelloProcessing extends PApplet
 	
 	public void draw()
 	{	
-		background(255,255,0);
-		line(10, 10, 200, 200); // x1,y1,x2,y2
-		circle(200, 250, 50); //cx, cy, r
-		ellipse(50, 200, 90, 200); //cx.cy.w.h
+		// background(255,255,0);
+		// line(10, 10, 200, 200); // x1,y1,x2,y2
+		// circle(200, 250, 50); //cx, cy, r
+		// ellipse(50, 200, 90, 200); //cx.cy.w.h
 
-		stroke(0);
-		fill(0,0,255);
-		noFill();
-		noStroke()
-		rectMode(CENTER);
+		// stroke(0);
+		// fill(0,0,255);
+		// noFill();
+		// noStroke();
+		// rectMode(CENTER);
 
-		rect(300,20,100,20); //tlx,tly,w,h
+		// rect(300,20,100,20); //tlx,tly,w,h
 
-		rectMode(CORNER);
+		// rectMode(CORNER);
 
-		rect(300,20,100,20); //tlx,tly,w,h
+		// rect(300,20,100,20); //tlx,tly,w,h
 
-		point(20,300);
+		// point(20,300);
 
-		triangle(10,400,50,450,300,200); //x1,y1,x2,y2,x3,y3
+		// triangle(10,400,50,450,300,200); //x1,y1,x2,y2,x3,y3
+		noStroke();
+		int pos = 0;
+		float hue = 0.0f;
+
+		for(;pos<10;pos++)
+		{
+		hue = pos * (17.0f);
+		fill(hue,255,255);
+		rect((width/10)*pos,0,((width/10)*pos)+(width/10),height);
+		}
+		System.out.println(hue);
 
 	}
 }
